@@ -11,7 +11,7 @@
     </div>
     <div>
       <% if current_user == comment.author %>
-        <%= link_to edit_comment_path(comment), class: "btn btn-link btn-sm text-muted" do %>
+        <%= link_to edit_comment_path(comment), remote: true, class: "btn btn-link btn-sm text-muted" do %>
           <i class="fas fa-edit fa-fw"></i>
         <% end %>
 
@@ -23,7 +23,7 @@
   </div>
 </li>
 
-<script>
+<!-- <script>
   // bind the click handler
   $("#comment_<%= comment.id %>_delete_link").on("click", function() { 
     
@@ -36,3 +36,4 @@
     return false;                         // break the link
   });
 </script>
+-->
